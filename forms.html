@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Form</title>
+</head>
+<body>
+        <h1>Fill this Form!</h1>
+   <form >
+        <label for="fname">First Name: </label>
+        <input id="input" type="text" id="fname" name="fname" placeholder="Enter your first name here" required> <br> <br>
+        <label for="lname">Last name: </label>
+        <input id="input" type="text" id="lname" name="lname" placeholder="Enter your last name here" required> <br> <br>
+        <label for="email">Email ID:  </label>
+        <input id="input" type="email" id="email" name="email" placeholder="abc@gmail.com" required> <br> <br>
+        <script>
+                function validateEmail(inputText) {
+                        var mailFormat =  /\S+@\S+\.\S+/;
+                        if (inputText.value.match(mailFormat)) {
+                                alert("Valid address!");
+                                return true;} else {
+                                        alert("Invalid address!");
+                                        return false;}}
+        </script>
+        <label for="phone">Phone No.: </label>
+        <input  id="input" type="tel" id="phone" name="phone" placeholder="91+" required><br> 
+        <label id="gender" for="Gender">Gender</label>
+        <input  id="male" type="radio" id="Male" name="Gender">
+        <label id="radio" for="Male">Male</label>
+        <input type="radio" id="Female" name="Gender">
+        <label id="radio" for="Female">Female</label>
+        <input type="radio" id="Other" name="Gender">
+        <label id="radio" for="Other">Prefer not to tell</label> <br> <br>
+        <label for="birthday">Birthday:</label>
+        <input id="input" type="date" id="birthday" name="birthday" placeholder="yyyy-mm-dd" > <br> <br>
+        <input type="submit" value="Submit" onclick="validateEmail(document.form1.email)" >
+   </form>     
+</body>
+</html>
